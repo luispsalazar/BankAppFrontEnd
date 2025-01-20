@@ -1,0 +1,34 @@
+<div class="form-container">
+  <h2>Add Account</h2>
+  <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" class="form-control" />
+      <div *ngIf="accountForm.get('name')?.invalid && accountForm.get('name')?.touched">
+        <small class="error">Name is required.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="customertype">Customer Type</label>
+      <input id="customertype" formControlName="customertype" class="form-control" />
+      <div *ngIf="accountForm.get('customertype')?.invalid && accountForm.get('customertype')?.touched">
+        <small class="error">Customer Type is required.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="streetnumber">Street Number</label>
+      <input id="streetnumber" formControlName="streetnumber" class="form-control" />
+      <div *ngIf="accountForm.get('streetnumber')?.invalid && accountForm.get('streetnumber')?.touched">
+        <small class="error">Street Number is required.</small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="postalcode">Postal Code</label>
+      <input id="postalcode" formControlName="postalcode" class="form-control" />
+      <div *ngIf="accountForm.get('postalcode')?.invalid && accountForm.get('postalcode')?.touched">
+        <small class="error">Postal Code is required.</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="accountForm.invalid" routerLink="/">Add Account</button>
+  </form>
+</div>

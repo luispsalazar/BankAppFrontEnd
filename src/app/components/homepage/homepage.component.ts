@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
-  imports: [],
+  standalone:true,
+  imports: [RouterModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
+
 export class HomepageComponent {
 
-  title = 'Homepage';
+  constructor(private router: Router) {
+  }
 
   onLoginButtonClick(): void {
-    console.log('First button clicked!');
+    this.router.navigateByUrl('/login');
   }
 
   onRegisterButtonClick(): void {
-    console.log('Second button clicked!');
-  }
-
-  onLogoutButtonClick() {
-    throw new Error('Method not implemented.');
+    this.router.navigateByUrl('/register');
   }
 }

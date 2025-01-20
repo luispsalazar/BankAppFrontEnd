@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <body>
     <div class="container">
-        <h3>{{title}}</h3>
-        <button type=" button" class="btn btn-primary btn-lg" (click)="onLoginButtonClick()">Login</button>
-        <button type=" button" class="btn btn-primary btn-lg" (click)="onRegisterButtonClick()">Register</button>
-        <button type=" button" class="btn btn-dark btn-lg" (click)="onLogoutButtonClick()">Logout</button>
+        <h1>Welcome to Our Banking App!</h1>
+        <p>Choose an option to get started</p>
+
+        <a routerLink="/login" class="btn btn-primary btn-lg">Login</a>
+
+        <!-- <button type="submit" class="btn btn-primary btn-lg" (click)="onLoginButtonClick()">Login</button> -->
+
+        <a routerLink="/register" class="btn btn-primary btn-lg">Register</a>
+        <!-- <button type="submit" class="btn btn-primary btn-lg" (click)="onRegisterButtonClick()">Register</button> -->
     </div>
 </body>
-
 </html>

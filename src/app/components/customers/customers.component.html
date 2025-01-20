@@ -1,13 +1,16 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular Bootstrap Sidebar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container-fluid" id="uniqueId">
+    <div class="container-fluid">
         <div class="row">
+            <!-- Main Content -->
             <div class="col-md-8 py-4">
                 <div class="container">
                     <h3>{{title}}</h3>
@@ -16,28 +19,17 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Account Id</th>
+                                <th>Customer Id</th>
                                 <th>Customer Name</th>
-                                <th>Account Balance</th>
-                                <th>Interest Rate</th>
+                                <th>Address</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Paul Cannon</td>
-                                <td>5000</td>
-                                <td>1</td>
-                                <td><button type="button" class="btn btn-warning">Update</button>
-                                    <button type="button" class="btn btn-danger">Delete</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jason Cors</td>
-                                <td>10000</td>
-                                <td>1.15</td>
+                            <tr *ngFor="let customer of customers">
+                                <td> {{customer.customerId}}</td>
+                                <td>{{customer.name}}</td>
+                                <td>{{customer.address}}</td>
                                 <td><button type="button" class="btn btn-warning">Update</button>
                                     <button type="button" class="btn btn-danger">Delete</button>
                                 </td>
@@ -50,3 +42,19 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<!-- <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <th scope="row">{{customer.id}}</th>
+            <td>{{customers.toString}}</td>
+            <td><a [routerLink]="['/customers',customer.id]">{{customers.find.name}}</a></td>
+        </tr>
+    </tbody>
+</table> -->
