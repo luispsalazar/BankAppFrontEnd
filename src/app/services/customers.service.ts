@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CustomersService {
 
   private baseUrl = 'http://localhost:8080/api/v1/customers';
@@ -12,6 +13,7 @@ export class CustomersService {
   constructor(private http: HttpClient) { }
 
   getCustomers(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+    // return this.http.get(`${this.baseUrl}`);
+    return this.http.get(this.baseUrl);
   }
 }

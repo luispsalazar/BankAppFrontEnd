@@ -3,7 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
-  standalone:true,
+  standalone: true,
   imports: [RouterModule],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'

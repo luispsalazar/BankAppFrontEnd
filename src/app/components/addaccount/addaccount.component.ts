@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-addaccount',
-  standalone:true,
+  standalone: true,
   imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './addaccount.component.html',
   styleUrl: './addaccount.component.scss'

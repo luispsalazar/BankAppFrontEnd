@@ -20,10 +20,10 @@ export class NavbarComponent {
   toggleDropdown(dropdown: string) {
     if (dropdown === 'dropdown1') {
       this.isDropdown1Open = !this.isDropdown1Open;
-      this.isDropdown2Open = false; // Close other dropdown
+      this.isDropdown2Open = false;
     } else if (dropdown === 'dropdown2') {
       this.isDropdown2Open = !this.isDropdown2Open;
-      this.isDropdown1Open = false; // Close other dropdown
+      this.isDropdown1Open = false;
     }
   }
 
@@ -32,7 +32,6 @@ export class NavbarComponent {
   }
 
   isNavbarVisible(): boolean {
-    // Routes where the navbar should be hidden:
     const hiddenRoutes = ['/login', '/register', '/homepage'];
     return !hiddenRoutes.includes(this.router.url);
   }

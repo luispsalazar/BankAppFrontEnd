@@ -8,14 +8,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { AddaccountComponent } from './components/addaccount/addaccount.component';
 import { CustomersComponent } from './components/customers/customers.component';
+import { AccountsComponent } from './components/accounts/accounts.component';
 
 export const routes: Routes = [
-    // { path: '', component: HomepageComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: 'homepage', component: HomepageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'customers', component: CustomersComponent },
+    { path: 'accounts', component: AddaccountComponent },
     { path: 'addaccount', component: AddaccountComponent },
     { path: '**', component: NotfoundComponent }
 ];
